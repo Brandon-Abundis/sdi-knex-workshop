@@ -6,8 +6,8 @@ exports.up = function(knex) {
   return knex.schema.createTable('models', table => {
     table.increments();
     table.string('name', 250).notNullable();
-    table.integer('makes_id').unsigned().notNullable();
-    table.foreign('makes_id').references(`makes.id`);
+    table.integer('make_id').unsigned().notNullable();
+    table.foreign('make_id').references(`makes.id`);
   })
 };
 

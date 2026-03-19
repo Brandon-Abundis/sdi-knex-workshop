@@ -5,13 +5,13 @@
 exports.up = function(knex) {
   return knex.schema.createTable('vehicles', table => {
     table.increments();
-    table.integer('vin', 50);
+    table.string('vin', 50);
     table.integer('year', 8);
-    table.integer('horse_power', 50);
+    table.string('horse_power', 50);
     table.string('color', 50);
     table.integer('mpg', 50);
-    table.integer('models_id').unsigned().notNullable();
-    table.foreign('models_id').references(`models.id`);
+    table.integer('model_id').unsigned().notNullable();
+    table.foreign('model_id').references(`models.id`);
   })
 };
 
