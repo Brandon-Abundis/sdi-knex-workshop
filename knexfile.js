@@ -12,7 +12,7 @@ module.exports = {
       password: 'docker',
       user: 'postgres',
       port: 5432,
-      database:'name of the database your created in docker'
+      database:'car_inventory'
 		}
 	},
 
